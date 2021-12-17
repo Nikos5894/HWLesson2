@@ -42,50 +42,49 @@ public class Main {
         System.out.println("sum of all multiples of 3: " + sum);
 
         //5. Вивести значення всіх парних індексів масиву
-        int[] arrIndex = new int[randomNumbers.length/2];
+        int[] arrIndex = new int[randomNumbers.length / 2];
         for (int i = 0, a = 0; i < randomNumbers.length; i++) {
             if (i % 2 == 0) {
                 arrIndex[a] = randomNumbers[i];
                 a++;
             }
         }
-        System.out.println("Values of odd indexes: "+Arrays.toString(arrIndex));
+        System.out.println("Values of odd indexes: " + Arrays.toString(arrIndex));
 
 
         //6. Просортувати масив в порядку зростання
         //bubble sort
         int[] arrToSort = randomNumbers.clone();
-        for(int i=0;i< arrToSort.length -1;i++){
+        for (int i = 0; i < arrToSort.length - 1; i++) {
             int temp;
-                for(int j = 1;j< arrToSort.length -i;j++){
-                    if(arrToSort[j-1] > arrToSort[j]) {
-                        temp = arrToSort[j - 1];
-                        arrToSort[j - 1] = arrToSort[j];
-                        arrToSort[j] = temp;
-                    }
+            for (int j = 1; j < arrToSort.length - i; j++) {
+                if (arrToSort[j - 1] > arrToSort[j]) {
+                    temp = arrToSort[j - 1];
+                    arrToSort[j - 1] = arrToSort[j];
+                    arrToSort[j] = temp;
                 }
+            }
         }
-        System.out.println("Sorted array: "+Arrays.toString(arrToSort));
+        System.out.println("Sorted array: " + Arrays.toString(arrToSort));
 
         //7. Вивести найменше значення в масиві
         int min = randomNumbers[0];
-        for(int i=0;i< randomNumbers.length -1;i++){
+        for (int i = 0; i < randomNumbers.length - 1; i++) {
 
-            for(int j = 1;j< randomNumbers.length -i;j++){
-                if(randomNumbers[j] < min) {
+            for (int j = 1; j < randomNumbers.length - i; j++) {
+                if (randomNumbers[j] < min) {
                     min = randomNumbers[j];
                 }
             }
         }
-        System.out.println("Min values: " +  min);
+        System.out.println("Min values: " + min);
 
 
         //8. Вивести найбільше значення масиву
         int max = randomNumbers[0];
-        for(int i=0;i< randomNumbers.length -1;i++){
-
-            for(int j = 1;j< randomNumbers.length -i;j++){
-                if(randomNumbers[j] > max) {
+        for (int i = 0; i < randomNumbers.length - 1; i++) {
+            for (int j = 1; j < randomNumbers.length - i; j++) {
+                if (randomNumbers[j] > max) {
                     max = randomNumbers[j];
                 }
             }
@@ -105,15 +104,15 @@ public class Main {
 
         //10. Вивести перших 20 символів з таблиці ASCI
         char[] firstTwentySymbols = new char[20];
-        for(int i = 0;i<firstTwentySymbols.length;i++){
+        for (int i = 0; i < firstTwentySymbols.length; i++) {
             firstTwentySymbols[i] = (char) (i);
         }
         System.out.println("First 20 symbols from ASCI table: " + Arrays.toString(firstTwentySymbols));
 
         //додаткою виведу 20 символів з таблиці ASCI починаючи з 80 позиції
         char[] TwentySymbols = new char[20];
-        for(int i = 0;i<TwentySymbols.length;i++){
-            TwentySymbols[i] = (char) (i+80);
+        for (int i = 0; i < TwentySymbols.length; i++) {
+            TwentySymbols[i] = (char) (i + 80);
         }
         System.out.println("20 symbols from ASCI table: " + Arrays.toString(TwentySymbols));
     }
