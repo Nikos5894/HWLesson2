@@ -122,6 +122,7 @@ public class Main {
             randomNumbers2[i] = a;
         }
         System.out.println("Random values: " + Arrays.toString(randomNumbers2));
+
         for (int i = 0; i < randomNumbers2.length; i+=2) {
             temp = randomNumbers2[i + 1];
             randomNumbers2[i + 1] = randomNumbers2[i];
