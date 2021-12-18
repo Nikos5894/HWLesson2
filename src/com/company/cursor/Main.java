@@ -92,15 +92,12 @@ public class Main {
         System.out.println("Max value: " + max);
 
 
-        //9. Вивести значення парних індексів масиву
-        int[] arrIndex1 = new int[20];
-        for (int i = 0, a = 0; i < 20; i++) {
-            if (i % 2 == 0) {
-                arrIndex1[a] = oddNumbers[i];
-                a++;
-            }
+        //9. Вивести суму значень всіх парних індексів
+        sum = 0;
+        for (int i = 0; i < oddNumbers.length; i+=2) {
+                sum += oddNumbers[i];
         }
-        System.out.println("First 20 values of odd indexes: " + Arrays.toString(arrIndex1));
+        System.out.println("Sum of odd indexes: " + sum);
 
         //10. Вивести перших 20 символів з таблиці ASCI
         char[] firstTwentySymbols = new char[20];
@@ -115,5 +112,21 @@ public class Main {
             TwentySymbols[i] = (char) (i + 80);
         }
         System.out.println("20 symbols from ASCI table: " + Arrays.toString(TwentySymbols));
+
+        //* (завдання з зірочкою)
+        //Заповнити масив рандомними числами, вивести їх, потім поміняти місцями парні з непарними
+        int temp;
+        int[] randomNumbers2 = new int[100];
+        for (int i = 0, a; i < randomNumbers2.length; i++) {
+            a = random.nextInt(100);
+            randomNumbers2[i] = a;
+        }
+        System.out.println("Random values: " + Arrays.toString(randomNumbers2));
+        for (int i = 0; i < randomNumbers2.length; i+=2) {
+            temp = randomNumbers2[i + 1];
+            randomNumbers2[i + 1] = randomNumbers2[i];
+            randomNumbers2[i] = temp;
+        }
+        System.out.println("changed random values odd and even places: " + Arrays.toString(randomNumbers2));
     }
 }
