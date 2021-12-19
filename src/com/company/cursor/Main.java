@@ -94,8 +94,8 @@ public class Main {
 
         //9. Вивести суму значень всіх парних індексів
         sum = 0;
-        for (int i = 0; i < oddNumbers.length; i+=2) {
-                sum += oddNumbers[i];
+        for (int i = 0; i < oddNumbers.length; i += 2) {
+            sum += oddNumbers[i];
         }
         System.out.println("Sum of odd indexes: " + sum);
 
@@ -123,7 +123,7 @@ public class Main {
         }
         System.out.println("Random values: " + Arrays.toString(randomNumbers2));
 
-        for (int i = 0; i < randomNumbers2.length; i+=2) {
+        for (int i = 0; i < randomNumbers2.length; i += 2) {
             temp = randomNumbers2[i + 1];
             randomNumbers2[i + 1] = randomNumbers2[i];
             randomNumbers2[i] = temp;
